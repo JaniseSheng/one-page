@@ -8,18 +8,11 @@
 }
 html,
 body {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lantinghei SC", "Hiragino Sans GB", STHeiti, "Noto Sans S Chinese", "Microsoft Yahei", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans-serif;
 }
 html {
   height: 100%;
-}
-img {
-  display: inline-block;
-  width: 100%;
-  vertical-align: middle;
-  height: 100%;
-  object-fit: contain;
 }
 body {
   font-size: 14px;
@@ -56,4 +49,55 @@ li {
 }
 audio {
   display: none !important;
+}
+.img-wrapper {
+  text-align: center;
+}
+.img-wrapper .img-box {
+  display: inline-block;
+}
+.img-wrapper img {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+.loading {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: snow;
+  z-index: 99;
+}
+.loading svg {
+  animation: svgloading 1.5s infinite;
+  -webkit-animation: svgloading 1.5s infinite;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@keyframes svgloading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes svgloading {
+  /*Safari and Chrome*/
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }

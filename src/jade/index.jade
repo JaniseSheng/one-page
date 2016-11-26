@@ -1,5 +1,6 @@
 include temp/head
 include temp/img-wrapper
+include temp/loading
 html
     head
         +title('*JaniseSheng Movies Library*')
@@ -35,7 +36,8 @@ html
                 +imglist('H5-28')
                 +imglist('H5-29')
                 +imglist('H5-30')
+        +loading
         audio(controls autoplay loop='loop')
-            source(src='mp3/1.mp3' type="audio/mpeg")
+            source(src='http://oh991bwke.bkt.clouddn.com/1.mp3' type="audio/mpeg")
 
     script(type="text/javascript",src="js/main-min.js")

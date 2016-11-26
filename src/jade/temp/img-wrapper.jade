@@ -1,4 +1,5 @@
 mixin imglist(picname)
     .img-wrapper.swiper-slide
-        -var imgurl = "imgs/"+picname+".jpg";
-        img(src="#{imgurl}")
+        .img-box
+            -var imgurl = "http://oh987oosx.bkt.clouddn.com/" + picname + ".jpg";
+            img(src="#{imgurl}")
