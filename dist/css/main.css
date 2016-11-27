@@ -54,11 +54,12 @@ audio {
   text-align: center;
 }
 .img-wrapper .img-box {
-  display: inline-block;
+  display: block;
 }
 .img-wrapper img {
   display: block;
   height: 100%;
+  width: 100%;
   max-width: 100%;
   margin: auto;
 }
