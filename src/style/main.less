@@ -1,13 +1,16 @@
 @import "base.less";
 
-audio{
+audio {
   display: none !important;
 }
 
-.img-wrapper{
+.img-wrapper {
   text-align: center;
-  .img-box{
+  .img-box {
     display: block;
+    @media (min-width: 600px) {
+      display: inline-block;
+    }
   }
   img {
     display: block;
@@ -15,10 +18,14 @@ audio{
     width: 100%;
     max-width: 100%;
     margin: auto;
+
+    @media (min-width: 600px) {
+      width: auto;
+    }
   }
 }
 
-.loading{
+.loading {
   display: block;
   position: fixed;
   width: 100%;
@@ -28,13 +35,13 @@ audio{
   background-color: snow;
   z-index: 99;
 
-  svg{
-    animation:svgloading 1.5s infinite;
-    -webkit-animation:svgloading 1.5s infinite;
+  svg {
+    animation: svgloading 1.5s infinite;
+    -webkit-animation: svgloading 1.5s infinite;
     position: absolute;
     width: 80px;
-    height:80px;
-    top:0;
+    height: 80px;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -42,8 +49,7 @@ audio{
   }
 }
 
-@keyframes svgloading
-{
+@keyframes svgloading {
   0% {
     transform: rotateZ(0deg);
   }

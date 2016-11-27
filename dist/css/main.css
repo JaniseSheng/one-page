@@ -56,12 +56,22 @@ audio {
 .img-wrapper .img-box {
   display: block;
 }
+@media (min-width: 600px) {
+  .img-wrapper .img-box {
+    display: inline-block;
+  }
+}
 .img-wrapper img {
   display: block;
   height: 100%;
   width: 100%;
   max-width: 100%;
   margin: auto;
+}
+@media (min-width: 600px) {
+  .img-wrapper img {
+    width: auto;
+  }
 }
 .loading {
   display: block;
