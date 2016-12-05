@@ -1,0 +1,25 @@
+.img-wrapper-2 {
+  background-image: url('../imgs/2/bg.jpg');
+  img {
+    .transition-duration(1s);
+  }
+
+  .img1 {
+    top:0;
+    bottom: 0;
+    margin: auto 0;
+    .scale(.2);
+    .rotate3d(1,1,1,180deg);
+  }
+
+
+  &.active {
+    .img1 {
+      .scale(1);
+      .rotate3d(0,0,0,0);
+    }
+
+  }
+}
+
+

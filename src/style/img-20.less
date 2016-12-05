@@ -1,0 +1,44 @@
+.img-wrapper-20 {
+  background-image: url('../imgs/20/bg.jpg');
+  img {
+    .transition-duration(1s);
+  }
+
+  .img1 {
+    .translate3d(0, 45.6%, 0);
+  }
+
+  .img2 {
+    .transition-delay(.6s);
+    .translate3d(100%, 150%, 0);
+  }
+  .img3 {
+    .transition-delay(.8s);
+    top:0;
+    bottom: 0;
+    margin: auto;
+    .scale(.2);
+    .rotate3d(1,1,1,180deg);
+  }
+  .img4 {
+    .transition-delay(.8s);
+    bottom: 0;
+    .translate3d(0, 100%, 0);
+  }
+
+  &.active {
+
+    .img2 {
+      .translate3d(0, 150%, 0);
+    }
+    .img3 {
+      .scale(1);
+      .rotate3d(0,0,0,0);
+    }
+    .img4 {
+      .translate3d(0, -60%, 0);
+    }
+  }
+}
+
+

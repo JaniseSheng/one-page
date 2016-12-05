@@ -1,0 +1,42 @@
+.img-wrapper-29 {
+  background-color: white;
+  img {
+    .transition-duration(1s);
+  }
+
+  .img1 {
+    .translate3d(0, -100%, 0);
+  }
+
+  .img2 {
+    .transition-delay(.3s);
+    bottom: 0;
+    z-index: 2;
+    .translate3d(0, -62%, 0);
+  }
+  .img3 {
+    .transition-delay(.8s);
+    bottom: 0;
+    .translate3d(100%, 0, 0);
+  }
+  .img4 {
+    .transition-delay(.8s);
+    bottom: 0;
+    .translate3d(-100%, 0, 0);
+  }
+
+  &.active {
+    .img1 {
+      .translate3d(0, 10%, 0);
+    }
+
+    .img3 {
+      .translate3d(0, 0, 0);
+    }
+    .img4 {
+      .translate3d(0, 0, 0);
+    }
+  }
+}
+
+

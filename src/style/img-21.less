@@ -1,0 +1,32 @@
+.img-wrapper-21 {
+  background-image: url('../imgs/21/bg.jpg');
+  img {
+    .transition-duration(1s);
+  }
+
+  .img1 {
+    .translate3d(100%, 15%, 0);
+  }
+
+  .img2 {
+    .transition-delay(.6s);
+    .translate3d(-100%, 40%, 0);
+  }
+  .img3 {
+    .transition-delay(.8s);
+    bottom: 0;
+    .translate3d(0, -8%, 0);
+  }
+
+  &.active {
+    .img1 {
+      .translate3d(0, 15%, 0);
+    }
+
+    .img2 {
+      .translate3d(0, 40%, 0);
+    }
+  }
+}
+
+

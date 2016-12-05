@@ -1,0 +1,46 @@
+audio {
+  display: none !important;
+}
+
+.loading {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: snow;
+  z-index: 99;
+
+  svg {
+    animation: svgloading 1.5s infinite;
+    -webkit-animation: svgloading 1.5s infinite;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+@keyframes svgloading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes svgloading /*Safari and Chrome*/
+{
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

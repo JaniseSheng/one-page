@@ -1,5 +1,6 @@
-mixin imglist(picname)
-    .img-wrapper.swiper-slide
+mixin imglist(num,imageArray)
+    .img-wrapper.swiper-slide(class='img-wrapper-' + num)
         .img-box
-            -var imgurl = "imgs/" + picname + ".jpg";
-            img(src="#{imgurl}")
+            span(style='font-size:24px;color:red;position:absolute')=num
+            each val in imageArray
+                img(src="imgs/" + num + "/" + val + '.png' class='img' + val)

@@ -1,0 +1,35 @@
+.img-wrapper-30 {
+  background-color: #034b5b;
+  img {
+    .transition-duration(1s);
+  }
+
+  .img1 {
+    .translate3d(100%, 45.6%, 0);
+  }
+
+  .img2 {
+    .transition-delay(.6s);
+    top:0;
+    bottom: 0;
+    margin: auto;
+    .translate3d(0, 0, 0);
+  }
+  .img3 {
+    .transition-delay(.8s);
+    bottom: 0;
+    .translate3d(0, 100%, 0);
+  }
+
+  &.active {
+    .img1 {
+      .translate3d(0, 45.6%, 0);
+    }
+
+    .img3 {
+      .translate3d(0, -50%, 0);
+    }
+  }
+}
+
+

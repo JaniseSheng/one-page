@@ -1,0 +1,90 @@
+.translate3d(@x, @y, @z) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform: translate3d(@x, @y, @z);
+  -ms-transform: translate3d(@x, @y, @z);
+  -o-transform: translate3d(@x, @y, @z);
+  transform: translate3d(@x, @y, @z);
+}
+
+.scale(@arg){
+  -webkit-transform: scale(@arg);
+  -moz-transform: scale(@arg);
+  -ms-transform: scale(@arg);
+  -o-transform: scale(@arg);
+  transform: scale(@arg);
+}
+
+.rotate3d(@argx,@argy,@argz,@argd){
+  -webkit-transform: rotate3d(@argx,@argy,@argz,@argd);
+  -moz-transform: rotate3d(@argx,@argy,@argz,@argd);
+  -ms-transform: rotate3d(@argx,@argy,@argz,@argd);
+  -o-transform: rotate3d(@argx,@argy,@argz,@argd);
+  transform: rotate3d(@argx,@argy,@argz,@argd);
+}
+
+
+.transition-property(@arg) {
+  -webkit-transition-property: @arg;
+  -moz-transition-property: @arg;
+  -ms-transition-property: @arg;
+  -o-transition-property: @arg;
+  transition-property: @arg;
+}
+
+.transition-timing-function(@arg) {
+  -webkit-transition-timing-function: @arg;
+  -moz-transition-timing-function: @arg;
+  -ms-transition-timing-function: @arg;
+  -o-transition-timing-function: @arg;
+  transition-timing-function: @arg;
+}
+
+.transition-duration(@arg) {
+  -webkit-transition-duration: @arg;
+  -moz-transition-duration: @arg;
+  -ms-transition-duration: @arg;
+  -o-transition-duration: @arg;
+  transition-duration: @arg;
+}
+
+.transition-delay(@arg) {
+  -webkit-transition-delay: @arg;
+  -moz-transition-delay: @arg;
+  -ms-transition-delay: @arg;
+  -o-transition-delay: @arg;
+  transition-delay: @arg;
+}
+
+.swiper-container {
+  max-width: 768px;
+  margin: auto;
+}
+
+.img-wrapper {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &.active {
+    z-index: 99;
+    & img {
+      opacity: 1;
+    }
+  }
+  img {
+    position: absolute;
+    .transition-property('transform, opacity');
+    .transition-timing-function('ease');
+    opacity: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+}
+
+.img-box {
+  position: relative;
+  height: 100%;
+  display: block;
+  margin: auto;
+
+}
